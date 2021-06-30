@@ -34,7 +34,7 @@ set type geography
 set color 6
 set country RU
 next
-edit "Taiwan, Province of China"
+edit "Taiwan Province of China"
 set type geography
 set color 6
 set country TW
@@ -46,7 +46,7 @@ set country TR
 next
 end
 config firewall addrgrp
-edit "Bad Countries"
+edit "Bad_Actors"
 set color 6
 append member "Brazil"
 append member "China"
