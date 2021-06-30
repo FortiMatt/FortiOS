@@ -1,0 +1,60 @@
+config firewall address
+edit "Brazil"
+set type geography
+set color 6
+set country BR
+next
+edit "China"
+set type geography
+set color 6
+set country CN
+next
+edit "Hungary"
+set type geography
+set color 6
+set country HU
+next
+edit "India"
+set type geography
+set color 6
+set country IN
+next
+edit "Italy"
+set type geography
+set color 6
+set country IT
+next
+edit "Romania"
+set type geography
+set color 6
+set country RO
+next
+edit "Russian Federation"
+set type geography
+set color 6
+set country RU
+next
+edit "Taiwan, Province of China"
+set type geography
+set color 6
+set country TW
+next
+edit "Turkey"
+set type geography
+set color 6
+set country TR
+next
+end
+config firewall addrgrp
+edit "Bad Countries"
+set color 6
+append member "Brazil"
+append member "China"
+append member "Hungary"
+append member "India"
+append member "Italy"
+append member "Romania"
+append member "Russian Federation"
+append member "Taiwan, Province of China"
+append member "Turkey"
+end
