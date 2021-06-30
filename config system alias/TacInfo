@@ -1,0 +1,28 @@
+config system alias
+edit "TacInfoCMDs"
+set command "
+get system status
+diagnose autoupdate versions
+exec date
+exec time
+"
+next
+edit "TacInfoDebugs"
+set command "
+diagnose hard sysinfo memory
+diagnose hard sysinfo shm
+diagnose hard sysinfo slab
+diagnose ips session status
+diagnose wad memory all
+diagnose firewall iprope state
+diagnose hardware sysinfo conserve
+diagnose sys session full-stat
+"
+next
+edit "TacInfo"
+set command "
+alias TacInfoCMDs
+alias TacInfoDebugs
+"
+next
+end
