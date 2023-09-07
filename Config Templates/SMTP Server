@@ -1,0 +1,9 @@
+config system email-server
+    set reply-to "replytome@domain.com"
+    set server "smtp.server.com"
+    set port 465
+    set authenticate enable
+    set username "replytome@domain.com"
+    set password NOTAREALPASSWORD!
+    set security smtps
+end
