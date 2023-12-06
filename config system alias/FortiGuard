@@ -1,0 +1,77 @@
+config system alias
+edit "FORTIGUARD_ANYCAST_DEFAULT"
+set command "
+diagnose debug rating
+config system fortiguard
+set fortiguard-anycast enable 
+set fortiguard-anycast-source fortinet 
+set update-server-location automatic
+set protocol https 
+set port 443
+end
+diagnose debug rating
+"
+next
+edit "FORTIGUARD_ANYCAST_DEFAULT_US"
+set command "
+diagnose debug rating
+config system fortiguard
+set fortiguard-anycast enable
+set update-server-location usa
+set fortiguard-anycast-source fortinet 
+set protocol https 
+set port 443
+end
+diagnose debug rating
+"
+next
+edit "FORTIGUARD_ANYCAST_AWS"
+set command "
+diagnose debug rating
+config system fortiguard
+set fortiguard-anycast enable 
+set fortiguard-anycast-source aws 
+set update-server-location automatic
+set protocol https 
+set port 443
+end
+diagnose debug rating
+"
+next
+edit "FORTIGUARD_UDP_8888"
+set command "
+diagnose debug rating
+config system fortiguard
+set fortiguard-anycast disable
+set update-server-location automatic
+set protocol udp 
+set port 8888
+end
+diagnose debug rating
+"
+next
+edit "FORTIGUARD_UDP_53"
+set command "
+diagnose debug rating
+config system fortiguard
+set fortiguard-anycast disable
+set update-server-location automatic
+set protocol udp 
+set port 53
+end
+diagnose debug rating
+"
+next
+edit "FORTIGUARD_HTTPS_8888"
+set command "
+diagnose debug rating
+config system fortiguard
+set fortiguard-anycast disable 
+set update-server-location automatic
+set protocol https 
+set port 8888
+end
+diagnose debug rating
+"
+next
+end
